@@ -1,4 +1,4 @@
 {
-  "*.{tsx,ts}": ["eslint --fix", "yarn test:staged"],
-  "*.{css,less,scss,html,json,tsx,ts,md}": "prettier --write"
+  "*.{ts,tsx}": ["eslint --fix", "yarn test:staged"],
+  "*.{css,less,scss,html,json,ts,tsx,md}": "prettier --write"
 }
