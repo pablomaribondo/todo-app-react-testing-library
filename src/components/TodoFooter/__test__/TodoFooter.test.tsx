@@ -23,3 +23,11 @@ it('should render the correct amount of incomplete tasks', () => {
 
   expect(paragraphElement).toBeInTheDocument();
 });
+
+it('should render "task" when the amount of incomplete tasks is one', () => {
+  render(<MockTodoFooter numberOfIncompleteTasks={1} />);
+
+  const paragraphElement = screen.getByText(/1 task left/i);
+
+  expect(paragraphElement).toBeInTheDocument();
+});
