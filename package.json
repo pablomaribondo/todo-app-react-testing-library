@@ -8,8 +8,8 @@
     "eject": "react-scripts eject",
     "test": "react-scripts test --passWithNoTests --no-cache --runInBand",
     "test:watch": "yarn test --watch ",
-    "test:staged": "yarn test --findRelatedTests",
-    "test:ci": "yarn test --coverage",
+    "test:staged": "yarn test --findRelatedTests --watchAll=false",
+    "test:ci": "yarn test --coverage --watchAll=false",
     "prepare": "npx husky install"
   },
   "dependencies": {
