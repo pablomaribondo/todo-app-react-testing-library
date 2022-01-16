@@ -16,18 +16,20 @@ const MockTodoFooter: FC<MockTodoFooterProps> = ({
   </Router>
 );
 
-it('should render the correct amount of incomplete tasks', () => {
-  render(<MockTodoFooter numberOfIncompleteTasks={5} />);
+describe('TodoFooter', () => {
+  it('should render the correct amount of incomplete tasks', () => {
+    render(<MockTodoFooter numberOfIncompleteTasks={5} />);
 
-  const paragraphElement = screen.getByText(/5 tasks left/i);
+    const paragraphElement = screen.getByText(/5 tasks left/i);
 
-  expect(paragraphElement).toBeInTheDocument();
-});
+    expect(paragraphElement).toBeInTheDocument();
+  });
 
-it('should render "task" when the amount of incomplete tasks is one', () => {
-  render(<MockTodoFooter numberOfIncompleteTasks={1} />);
+  it('should render "task" when the amount of incomplete tasks is one', () => {
+    render(<MockTodoFooter numberOfIncompleteTasks={1} />);
 
-  const paragraphElement = screen.getByText(/1 task left/i);
+    const paragraphElement = screen.getByText(/1 task left/i);
 
-  expect(paragraphElement).toBeInTheDocument();
+    expect(paragraphElement).toBeInTheDocument();
+  });
 });
